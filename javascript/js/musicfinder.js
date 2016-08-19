@@ -1,4 +1,4 @@
-var productionHost = 'immense-meadow-58582.herokuapp.com';
+var productionHost = 'scott-marinoff.github.io';
 var devToken = '879191ca5cd318109d3e8ddeefcbca25';
 var prodToken = 'scotty';
 
