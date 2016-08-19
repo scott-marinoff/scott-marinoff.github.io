@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Good Music">
+    <meta name="author" content="Scott Marinoff">
+    <!-- <link rel="icon" href="../../favicon.ico"> -->
+
+    <title>Music Finder</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- start Mixpanel -->
+    <script type="text/javascript" src="js/musicfinder.js"></script>
+
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="css/sticky-footer.css" rel="stylesheet">
+    <!-- Can hide until implement sign-in -->
+    <!-- <link href="jumbotron.css" rel="stylesheet"> -->
+  </head>
+
+  <body>
+
+    <script type="text/javascript">
+      $( document ).ready(function() {
+        var genres = document.getElementsByClassName("genre");
+        var g = [];
+
+        for (i=0; i<genres.length; i++) {
+          g.push(genres[i].innerText);
+        }
+
+        mixpanel.track("Page viewed", {
+          "Event": "Page viewed",
+          "Page" : "Homepage",
+          "Path" : window.location.pathname,
+          "Genres seen" : g
+        })
+      });
+    </script>
+
+    <nav class="navbar navbar-static-top navbar-dark bg-inverse">
+      <a class="navbar-brand" href="/">Music Finder</a>
+      <ul class="nav navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about.html">About</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="display-3">We love good music!</h1>
+        <p>Let us help you find something new. Choose from any of the rotating genres below or sign up and save your favorites.</p>
+        <p><a class="btn btn-primary btn-lg" href="/signup.html" role="button">Sign up &raquo;</a></p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2 class="genre">Folk</h2>
+          <p>Each country has their own folk music, but the genre usually refers to American and British music that has been passed through the generations by oral tradition. It's simple, acoustic-based music that spins everyday events and common people into mythic status. Many traditional folksongs have no known author, they have simply evolved over the years. </p>
+          <p><a id="link-folk" class="btn btn-secondary" href="/listen/folk.html" role="button">Listen &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2 class="genre">Rock</h2>
+          <p>Rock & Roll is often used as a generic term, but its sound is rarely predictable. From the outset, when the early rockers merged country and blues, rock has been defined by its energy, rebellion and catchy hooks, but as the genre aged, it began to shed those very characteristics, placing equal emphasis on craftmanship and pushing the boundaries of the music. </p>
+          <p><a id="link-rock" class="btn btn-secondary" href="/listen/rock.html" role="button">Listen &raquo;</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2 class="genre">Rap</h2>
+          <p>Rap's germination is sometimes attributed to the righteous street poetry of the Last Poets and the Watts Prophets, but it didn't begin to take full shape -- and earn its tag -- until after the Sugarhill Gang released "Rapper's Delight" in 1979. Since then, rap spread from its New York epicenter throughout the remainder of the U.S. (with each region taking on its own specific flavor) and then to countless countries. </p>
+          <p><a id="link-rap" class="btn btn-secondary" href="/listen/rap.html" role="button">Listen &raquo;</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+    </div> <!-- /container -->
+
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">Find me on <a href="https://mixpanel.com/report/1021099/segmentation/">Mixpanel</a>!</p>
+      </div>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
