@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 
     <!-- jQuery CDN -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
     <!-- Custom styles for this template -->
     <!-- Can hide until implement sign-in -->
@@ -31,6 +31,15 @@
   </head>
 
   <body>
+
+    <script type="text/javascript">
+      mixpanel.track("Page viewed", {
+          "Event": "Page viewed",
+          "Page" : "Directory",
+          "Path" : window.location.pathname
+        })
+      });
+    </script>
 
     <nav class="navbar navbar-static-top navbar-dark bg-inverse">
       <a class="navbar-brand" href="/">Music Finder</a>
@@ -46,14 +55,14 @@
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
-      <div class="container">
+      <div class="container-fluid">
         <h1 class="display-3">Music Finder</h1>
       </div>
 
     </div>
 
     <footer class="footer">
-      <div class="container">
+      <div class="container-fluid">
         <p class="text-muted">Find me on <a href="https://mixpanel.com/report/1021099/segmentation/">Mixpanel</a>!</p>
       </div>
     </footer>
