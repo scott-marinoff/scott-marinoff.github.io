@@ -1,1 +1,0 @@
-# scott-marinoff.github.io
