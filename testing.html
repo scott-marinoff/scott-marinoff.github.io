@@ -63,7 +63,9 @@
 
           mixpanel.reset();
 
-          alert(cn);
+          alert("the distinct_id at mixpanel is:" + mixpanel.get_distinct_id());
+
+          // alert(cn);
 
           mixpanel.identify(cn);
 
