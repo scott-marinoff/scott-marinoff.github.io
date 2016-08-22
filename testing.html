@@ -54,20 +54,20 @@
       <div class="container">
         <h1 class="display-3">Music Finder</h1>
       </div>
-      <div class="container-fluid">
+      <div class="container">
         <p class="lead">This page is available for testing various javascript functions.<br>
         <!-- Insert your testing code here. -->
         <script type="text/javascript">
         function myLogin(cn) {
-          mixpanel.Ce4Less.reset();
+          var did = mixpanel.get_distinct_id();
 
-          //cn is = 176051 or 176052
+          mixpanel.reset();
 
           alert(cn);
 
-          mixpanel.Ce4Less.identify(cn);
+          mixpanel.identify(cn);
 
-          alert("the distinct_id at mixpanel is:" + mixpanel.Testing.get_distinct_id());
+          alert("the distinct_id at mixpanel is:" + mixpanel.get_distinct_id());
 
         }
         </script>
