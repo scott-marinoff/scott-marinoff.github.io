@@ -12,3 +12,14 @@ if (window.location.hostname.toLowerCase().search(productionHost) < 0) {
 } else {
     mixpanel.init(prodToken, {cross_subdomain_cookie : false﻿});
 }
+
+function getProjectLink() {
+	return window.location.hostname;
+	if (window.location.pathname.search("javascript") > 0) {
+		return "https://mixpanel.com/report/1021099/segmentation/";
+	} else if (window.location.pathname.search("segment") > 0){
+		return "https://mixpanel.com/report/1021099/segmentation/";
+	} else if (window.location.pathname.search("gtm") > 0){
+		return "https://mixpanel.com/report/1021099/segmentation/";
+	}
+}
