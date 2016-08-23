@@ -57,24 +57,7 @@
       <div class="container">
         <p class="lead">This page is available for testing various javascript functions.<br>
         <!-- Insert your testing code here. -->
-        <script type="text/javascript">
-        function myLogin(cn) {
-          var did = mixpanel.get_distinct_id();
 
-          mixpanel.reset();
-
-          alert("the distinct_id at mixpanel is:" + mixpanel.get_distinct_id());
-
-          // alert(cn);
-
-          mixpanel.identify(cn);
-
-          alert("the distinct_id at mixpanel is:" + mixpanel.get_distinct_id());
-
-        }
-
-        myLogin(5);
-        </script>
       </div>
 
     </div>
