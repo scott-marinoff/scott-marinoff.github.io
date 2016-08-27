@@ -17,7 +17,6 @@
     <!-- start Mixpanel -->
     <script type="text/javascript" src="../../js/musicfinder.js"></script>
 
-
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 
@@ -29,6 +28,7 @@
 
   <body>
 
+    <!-- Track page view -->
     <script type="text/javascript">
         mixpanel.track("Page viewed", {
           "Event": "Page viewed",
@@ -50,6 +50,8 @@
       </ul>
     </nav>
 
+    <!-- Track forms entry -->
+    <!-- Does this even work? -->
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <script type="text/javascript">mixpanel.track_forms("#register", "Registered");</script>
 
