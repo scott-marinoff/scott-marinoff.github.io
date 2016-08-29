@@ -51,6 +51,11 @@
           "Path" : window.location.pathname,
           "Genres seen" : "Electronic"
         });
+
+        mixpanel.init('Project Token', {'loaded':function(mixpanel) {
+          var distinct_id = mixpanel.get_distinct_id()}
+          console.log("Distinct ID:" + distinct_id)
+        });
     </script>
 
     <script>
