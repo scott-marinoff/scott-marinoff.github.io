@@ -16,17 +16,17 @@ if (window.location.pathname.search("segment") > 0) {
 	mixpanel.init(phpToken, {cross_subdomain_cookie : false﻿}, "php");
 }
 
-function getProjectLink() {
-	return window.location.hostname;
-	if (window.location.pathname.search("javascript") > 0) {
-		return "https://mixpanel.com/report/1021099/segmentation/";
-	} else if (window.location.pathname.search("autotrack") > 0){
-		return "https://mixpanel.com/report/1042775/segmentation/";
-	} else if (window.location.pathname.search("segment") > 0){
-		return "https://mixpanel.com/report/1038391/segmentation/";
-	// } else if (window.location.pathname.search("gtm") > 0){
-	// 	return "https://mixpanel.com/report/1021099/segmentation/";
-	} else if (window.location.pathname.search("php") > 0){
-		return "https://mixpanel.com/report/1039803/segmentation/";
-	}
-}
+// function getProjectLink() {
+// 	return window.location.hostname;
+// 	if (window.location.pathname.search("javascript") > 0) {
+// 		return "https://mixpanel.com/report/1021099/segmentation/";
+// 	} else if (window.location.pathname.search("autotrack") > 0){
+// 		return "https://mixpanel.com/report/1042775/segmentation/";
+// 	} else if (window.location.pathname.search("segment") > 0){
+// 		return "https://mixpanel.com/report/1038391/segmentation/";
+// 	// } else if (window.location.pathname.search("gtm") > 0){
+// 	// 	return "https://mixpanel.com/report/1021099/segmentation/";
+// 	} else if (window.location.pathname.search("php") > 0){
+// 		return "https://mixpanel.com/report/1039803/segmentation/";
+// 	}
+// }
