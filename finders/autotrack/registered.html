@@ -38,31 +38,32 @@
       });
     </script>
 
+    <!-- Commenting out to test Autotrack form functionality -->
     <script type="text/javascript">
-      mixpanel.register_once({"Account Created Date": new Date().toISOString()});
+      // mixpanel.register_once({"Account Created Date": new Date().toISOString()});
 
-      mixpanel.register({
-        "Plan": "Free", 
-        "$email": getQueryParam("email")
-      });
+      // mixpanel.register({
+      //   "Plan": "Free", 
+      //   "$email": getQueryParam("email")
+      // });
 
-      mixpanel.track("Signup", {
-        "Plan": "Free",
-        "Revenue": 0
-      })
+      // mixpanel.track("Signup", {
+      //   "Plan": "Free",
+      //   "Revenue": 0
+      // })
 
-      mixpanel.people.set({
-        "$name": getQueryParam("name"), 
-        "$email": getQueryParam("email"), 
-        "Age at Signup": getQueryParam("age"),
-        "Newsletter": getQueryParam("newsletter"),
-        "$created": new Date(),
-        "Date Last Seen": new Date(),
-        "Plan": "Free",
-        "Lifetime Listens": 0,
-        "Preferred Genres": getQueryParam("optionsRadios")
-      });
-      mixpanel.identify();
+      // mixpanel.people.set({
+      //   "$name": getQueryParam("name"), 
+      //   "$email": getQueryParam("email"), 
+      //   "Age at Signup": getQueryParam("age"),
+      //   "Newsletter": getQueryParam("newsletter"),
+      //   "$created": new Date(),
+      //   "Date Last Seen": new Date(),
+      //   "Plan": "Free",
+      //   "Lifetime Listens": 0,
+      //   "Preferred Genres": getQueryParam("optionsRadios")
+      // });
+      // mixpanel.identify();
     </script>
 
     <nav class="navbar navbar-static-top navbar-dark bg-inverse">
@@ -156,8 +157,9 @@
                 var artist = "Andy Stott";
                 
               };
-              mixpanel.track("Played song", {"Song played": song, "Artist": artist});
-              mixpanel.people.increment("Total Songs Played");
+              // Commenting out to test Autotrack fucntionality
+              // mixpanel.track("Played song", {"Song played": song, "Artist": artist});
+              // mixpanel.people.increment("Total Songs Played");
               done = true;
             }
             if (event.data == YT.PlayerState.ENDED) {
