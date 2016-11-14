@@ -30,6 +30,15 @@
   <body>
 
     <script type="text/javascript">
+    var userAgentBotTest = navigator.userAgent;
+      mixpanel.register({"User Agent": userAgentBotTest});
+      if (/(Mozilla\/4.0)/i.test(userAgentBotTest)) {
+           // mixpanel.register({"$ignore": true});
+           mixpanel.register({"Bot" : true})
+      }
+    </script>
+
+    <script type="text/javascript">
       mixpanel.track("Page viewed", {
           "Event": "Page viewed",
           "Page" : "Directory",
@@ -85,6 +94,15 @@
     <script src="js/ie10-viewport-bug-workaround.js"></script>
   </body>
   <footer>
+    <script>
+      function captureSetEmail() {
+              var userEmail = document.getElementById("email-yui_3_17_2_5_1476196088149_5384-field").value;
+              mixpanel.people.set({"$email": userEmail});
+              mixpanel.alias(userEmail);
+              mixpanel.identify();
+          };
 
+      document.getElementById("yui_3_17_2_1_1477694099919_2358").onclick = displayDate;
+      </script> 
   </footer>
 </html>
