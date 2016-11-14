@@ -30,15 +30,16 @@
   <body>
 
     <script type="text/javascript">
-    if (location.hostname.indexOf("pingdom") != -1) { mixpanel.register({"Bot" : true, "Bot name" : "Pingdom"});
-
-
     var userAgentBotTest = navigator.userAgent;
-      mixpanel.register({"User Agent": userAgentBotTest});
-      if (/(Mozilla\/4.0)/i.test(userAgentBotTest)) {
-           // mixpanel.register({"$ignore": true});
-           mixpanel.register({"Bot" : true})
-      }
+
+    mixpanel.register({"User Agent": userAgentBotTest});
+
+    console.log("Agent registered.");
+
+    if (/(Mozilla\/4.0)/i.test(userAgentBotTest)) {
+         // mixpanel.register({"$ignore": true});
+         mixpanel.register({"Bot" : true});
+    };
     </script>
 
     <script type="text/javascript">
