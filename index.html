@@ -30,27 +30,16 @@
   <body>
 
     <script type="text/javascript">
-    var userAgentBotTest = navigator.userAgent;
-
-    mixpanel.register({"User Agent": userAgentBotTest});
-
-    // console.log("Agent registered.");
-
     navigators = ["appCodeName", "appName", "appVersion", "cookieEnabled", "language", "onLine", "platform", "userAgent"];
-    navi = [];
     navbase = "navigator";
-
+    people_props = {};
     for (i=0; i<navigators.length; i++) {
-      navstring = navbase + "." + navigators[i];
-      console.log(navstring);
-      // mixpanel.register({navigators[i] : navstring});
-      eval("console.log(" + navstring + ")");
+      prop = navigators[i];
+      navstring = navbase + "." + prop;
+      val = eval(navstring);
+      people_props[prop] = val;
     }
-
-    if (/(Mozilla\/4.0)/i.test(userAgentBotTest)) {
-         // mixpanel.register({"$ignore": true});
-         mixpanel.register({"Bot" : true});
-    };
+    mixpanel.register(people_props);
     </script>
 
     <script type="text/javascript">
