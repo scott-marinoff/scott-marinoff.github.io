@@ -34,7 +34,18 @@
 
     mixpanel.register({"User Agent": userAgentBotTest});
 
-    console.log("Agent registered.");
+    // console.log("Agent registered.");
+
+    navigators = ["appCodeName", "appName", "appVersion", "cookieEnabled", "language", "onLine", "platform", "userAgent"];
+    navi = [];
+    navbase = "navigator";
+
+    for (i=0; i<navigators.length; i++) {
+      navstring = navbase + "." + navigators[i];
+      console.log(navstring);
+      // mixpanel.register({navigators[i] : navstring});
+      eval("console.log(" + navstring + ")");
+    }
 
     if (/(Mozilla\/4.0)/i.test(userAgentBotTest)) {
          // mixpanel.register({"$ignore": true});
