@@ -44,7 +44,14 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <h1 class="display-3">Music Finder</h1>
+        <h1 class="display-3">Music Finder</h1><br><br>
+        Search here: <input type="search" id="mySearch" autofocus><button onclick="myFunction()">Search</button>
+
+        <script type="text/javascript">
+        function myFunction() {
+          mixpanel.track("Search completed");
+        }
+        </script>
       </div>
 
     </div>
