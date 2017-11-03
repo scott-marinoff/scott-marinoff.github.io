@@ -1,5 +1,5 @@
 var productionHost = 'scott-marinoff.github.io';
-var prodToken = 'scotty';
+var prodToken = 'scotty_token';
 var segToken = '70c90561b718ce5116e1b437caff590a';
 var phpToken = 'fd57ae8ed4617b21b3ee19238a7309d8';
 var autoToken = '0e8781c1dd2aa9fd881984ef1ecbd413';
